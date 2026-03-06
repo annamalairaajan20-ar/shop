@@ -198,12 +198,12 @@
                 const img = `${p.image}`;
 
                 box.innerHTML = `
-                    <div>
+                    <div class="product-image-container">
                         <img src="${img}" class="product-img" alt="${p.Name}">
-
-                        
-                       
-
+                        <button class="wishlist-icon ${p.wishlist ? 'active' : ''}" 
+                                onclick="toggleWishlist(${i})" title="Add to wishlist" style="border:none; background:none; padding:0; font-size:2em;">
+                            ${p.wishlist ? '❤️' : '🤍'}
+                        </button>
                     </div>
                     <div class="product-details">
                         <div class="text" >
